@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыка қосылған сайт</title>
+    <link rel="stylesheet" href="ilias.css">
+</head>
+<body>
+    <div class="hearts">
+  <span>❤️</span>
+  <span>💖</span>
+  <span>💗</span>
+  <span>💘</span>
+  <span>💕</span>
+</div>
+
+
+    <h1>I love only you 🎶</h1>
+
+    <audio id="music" autoplay loop>
+    <source src="gana.mp3" type="audio/mpeg">
+</audio>
+<button id="playBtn">▶️ Play music</button>
+<script>
+  const audio = document.getElementById("music");
+  const btn = document.getElementById("playBtn");
+
+  btn.addEventListener("click", () => {
+    audio.currentTime = 50; // қайырмасы
+    audio.play();
+    btn.style.display = "none";
+  });
+</script>
+<script>
+  const hearts = ["❤️","💖","💗","💘","💕","💞","💓"];
+
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 8000);
+  }, 300); // 👈 әр 0.3 секундта жаңа жүрек
+  
+  document.addEventListener("click", (e) => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "💥❤️";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    heart.style.animationDuration = "3s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 3000);
+  });
+
+
+</script>
+
+
+
+
+</body>
+</html>
