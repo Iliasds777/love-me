@@ -98,12 +98,12 @@ body {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
-    position: absolute;
-    
+    position: relative;   /* absolute емес! */
 }
+
 .question label {
   display: block; /* әр "Иә/Жоқ" жаңа жолға шығады */
   margin-top: 5px; /* аралық қосу */
@@ -255,3 +255,10 @@ h2{
         transform: scale(1);
     }
 }
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
