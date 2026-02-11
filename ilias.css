@@ -64,4 +64,34 @@ body {
     opacity: 0;
   }
 }
+#buttons {
+    margin-top: 20px;
+}
+
+#yes {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#no {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#loveMessage {
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+}
 

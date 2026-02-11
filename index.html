@@ -16,12 +16,21 @@
 </div>
 
 
-    <h1>I love only you 🎶</h1>
+    <h1></h1>
 
     <audio id="music" autoplay loop>
     <source src="gana.mp3" type="audio/mpeg">
 </audio>
 <button id="playBtn">▶️ Play music</button>
+<h2 id="question">Қозы Көрпеш - Баян Сұлу күнін бірге өткіземіз бе? 💖</h2>
+
+<div id="buttons">
+    <button id="yes">Ия</button>
+    <button id="no">Жоқ</button>
+</div>
+
+<div id="loveMessage"></div>
+
 <script>
   const audio = document.getElementById("music");
   const btn = document.getElementById("playBtn");
@@ -49,19 +58,35 @@
     }, 8000);
   }, 300); // 👈 әр 0.3 секундта жаңа жүрек
   
-  document.addEventListener("click", (e) => {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerText = "💥❤️";
-    heart.style.left = e.clientX + "px";
-    heart.style.top = e.clientY + "px";
-    heart.style.animationDuration = "3s";
+  // document.addEventListener("click", (e) => {
+  //   const heart = document.createElement("div");
+  //   heart.className = "heart";
+  //   heart.innerText = "💥❤️";
+  //   heart.style.left = e.clientX + "px";
+  //   heart.style.top = e.clientY + "px";
+  //   heart.style.animationDuration = "3s";
 
-    document.body.appendChild(heart);
+  //   document.body.appendChild(heart);
 
-    setTimeout(() => heart.remove(), 3000);
-  });
+  //   setTimeout(() => heart.remove(), 3000);
+  // });
 
+const noBtn = document.getElementById("no");
+const yesBtn = document.getElementById("yes");
+const loveMessage = document.getElementById("loveMessage");
+
+// ЖОҚ қашады
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+// ИЯ басқанда текст шығады
+yesBtn.addEventListener("click", () => {
+    loveMessage.innerHTML = "Мен сені жақсы көремін ❤️✨";
+});
 
 </script>
 
