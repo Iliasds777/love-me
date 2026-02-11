@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  /* margin: 0;
   height: 100vh;
   background: linear-gradient(120deg, #ff758c, #ff7eb3);
   overflow: hidden;
@@ -7,7 +7,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: sans-serif; */
+  
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(to bottom right, #ff9ecf, #ff6fa5);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+
+
 }
 
 /* МІНЕ ОСЫ ЖЕТІСПЕЙ ТҰРҒАН */
@@ -139,5 +152,109 @@ h1{
     100% {
         opacity: 0;
         transform: translate(var(--x), var(--y)) scale(0.3) rotate(720deg);
+    }
+}
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+h1, h2 {
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+@media (max-width: 600px) {
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    .bigHeart {
+        font-size: 60px;
+    }
+}
+#no {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;   /* absolute емес! */
+}
+h2{
+  color: rgba(245, 33, 5, 0.938);
+}
+#question {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 0 10px pink,
+                 0 0 20px hotpink,
+                 0 0 40px red;
+    animation: glow 2s infinite alternate;
+    
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px pink,
+                     0 0 20px hotpink;
+    }
+    to {
+        text-shadow: 0 0 20px red,
+                     0 0 40px deeppink;
+    }
+}
+#question {
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* h2 #question{
+   font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 0 10px pink,
+                 0 0 20px hotpink,
+                 0 0 40px red;
+    animation: glow 2s infinite alternate;
+
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px pink,
+                     0 0 20px hotpink;
+    }
+    to {
+        text-shadow: 0 0 20px red,
+                     0 0 40px deeppink;
+    }
+} */
+.loveText {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    animation: loveAppear 1.5s ease forwards;
+    text-shadow: 0 0 10px pink,
+                 0 0 20px hotpink,
+                 0 0 40px red;
+}
+
+@keyframes loveAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
