@@ -79,16 +79,18 @@ body {
 }
 #buttons {
     margin-top: 20px;
+    
+    
 }
-
 #yes {
     background: green;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 18px;
     cursor: pointer;
+    
 }
 
 #no {
@@ -96,11 +98,17 @@ body {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 18px;
     cursor: pointer;
     position: absolute;
+    
 }
+.question label {
+  display: block; /* әр "Иә/Жоқ" жаңа жолға шығады */
+  margin-top: 5px; /* аралық қосу */
+}
+
 
 #loveMessage {
     margin-top: 20px;
@@ -174,16 +182,7 @@ h1, h2 {
         font-size: 60px;
     }
 }
-#no {
-    background: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;   /* absolute емес! */
-}
+
 h2{
   color: rgba(245, 33, 5, 0.938);
 }
@@ -239,13 +238,11 @@ h2{
 } */
 .loveText {
     font-family: 'Pacifico', cursive;
-    font-size: 36px;
+    font-size: 25px;
     color: white;
     text-align: center;
     animation: loveAppear 1.5s ease forwards;
-    text-shadow: 0 0 10px pink,
-                 0 0 20px hotpink,
-                 0 0 40px red;
+   
 }
 
 @keyframes loveAppear {
